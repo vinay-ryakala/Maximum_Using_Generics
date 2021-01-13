@@ -1,25 +1,28 @@
 package com.genric;
 
+import java.util.Arrays;
+import java.util.List;
+
 //Welcome to  maximum number using generics
 public class Maximum<T extends Comparable<T>> {
-    T x,y,z;
+    T [] inputArray;
 
-    public Maximum(T x,T y,T z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+    public Maximum(T[] inputArray) {
+        this.inputArray = inputArray ;
     }
     public T maximum(){
-        return Maximum.maximumGenericMethod(x,y,z);
+        return Maximum.maximumGenericMethod(inputArray);
     }
 
     //using generic method to find maximum
-    public static <E extends Comparable<E>> E maximumGenericMethod(E firstValue,E secondValue,E thirdValue){
-        E max = firstValue;
-        if(secondValue.compareTo(max) > 0)
-            max = secondValue;
-        if(thirdValue.compareTo(max) > 0)
-            max = thirdValue;
+    public static <E extends Comparable<E>> E maximumGenericMethod(E [] inputArray){
+        List<E> numb = Arrays.asList(inputArray);
+        E max = numb.get(0);
+        for (int i=1; i<numb.size();i++){
+            if(numb.get(i).compareTo(max) > 0)
+                max = numb.get(i);
+
+        }
         return max;
     }
 }
