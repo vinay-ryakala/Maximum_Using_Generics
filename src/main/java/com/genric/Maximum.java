@@ -10,4 +10,13 @@ public class Maximum {
             max = thirdValue;
         return max;
     }
+
+    public Float getMaxFloat(Float firstValueFloat, Float secondValueFloat, Float thirdValueFloat) {
+        Float max = firstValueFloat;
+        if(secondValueFloat.compareTo(max) > 0)
+            max = secondValueFloat;
+        if(thirdValueFloat.compareTo(max) > 0)
+            max = thirdValueFloat;
+        return max;
+    }
 }

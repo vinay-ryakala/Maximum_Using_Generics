@@ -29,4 +29,28 @@ public class MaximumTest {
         Assert.assertEquals(expected,acctualResult);
 
     }
+    @Test
+    public void givenFloatFirstNumberGrater_WhenLargest_ShouldReturnMax(){
+        Float expectedFloat = 90.5f;
+        Maximum maximum = new Maximum();
+        Float acctualResultFloat =  maximum.getMaxFloat(90.5f,20.56f,10.52f);
+        Assert.assertEquals(expectedFloat,acctualResultFloat);
+
+    }
+    @Test
+    public void givenFloatSecondNumberGrater_WhenLargest_ShouldReturnMax(){
+        Float expectedFloat = 90.5f;
+        Maximum maximum = new Maximum();
+        Float acctualResultFloat =  maximum.getMaxFloat(20.5f,90.5f,10.6f);
+        Assert.assertEquals(expectedFloat,acctualResultFloat);
+    }
+    @Test
+    public void givenFloatThirdNumberGrater_WhenLargest_ShouldReturnMax(){
+        Float expectedFloat = 90.5f;
+        Maximum maximum = new Maximum();
+        Float acctualResultFloat =  maximum.getMaxFloat(20.5f,10.5f,90.5f);
+        Assert.assertEquals(expectedFloat,acctualResultFloat);
+    }
+
+
 }
