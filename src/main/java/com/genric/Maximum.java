@@ -19,4 +19,14 @@ public class Maximum {
             max = thirdValueFloat;
         return max;
     }
+
+    public String getMaxString(String firstString, String secondString, String thirdString) {
+        String max = firstString;
+        if(secondString.compareTo(max) > 0)
+            max = secondString;
+        if(thirdString.compareTo(max) > 0)
+            max = thirdString;
+        return max;
+
+    }
 }

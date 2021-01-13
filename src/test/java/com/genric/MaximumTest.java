@@ -51,6 +51,28 @@ public class MaximumTest {
         Float acctualResultFloat =  maximum.getMaxFloat(20.5f,10.5f,90.5f);
         Assert.assertEquals(expectedFloat,acctualResultFloat);
     }
+    @Test
+    public void givenFirstStringGrater_WhenLargest_ShouldReturnMax(){
+        String expectedString = "Bat";
+        Maximum maximum = new Maximum();
+        String acctualResult =  maximum.getMaxString("Bat","Apple","Ant");
+        Assert.assertEquals(expectedString,acctualResult);
+    }
+    @Test
+    public void givenSecondStringGrater_WhenLargest_ShouldReturnMax(){
+        String expectedString = "Bat";
+        Maximum maximum = new Maximum();
+        String acctualResult =  maximum.getMaxString("Apple","Bat","Ant");
+        Assert.assertEquals(expectedString,acctualResult);
+    }
+    @Test
+    public void givenThirdStringGrater_WhenLargest_ShouldReturnMax(){
+        String expectedString = "Bat";
+        Maximum maximum = new Maximum();
+        String acctualResult =  maximum.getMaxString("Apple","Ant","Bat");
+        Assert.assertEquals(expectedString,acctualResult);
+    }
+
 
 
 }
